@@ -22,6 +22,7 @@ const usePosts = (pageNum = 1) => {
 
     const controller = new AbortController();
     const { signal } = controller;
+
     getPostsPage(pageNum, { signal })
       .then((data) => {
         setResults((prevResults) => {
